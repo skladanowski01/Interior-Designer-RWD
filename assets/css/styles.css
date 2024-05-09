@@ -317,7 +317,8 @@ body.dark-theme{
     background-color: var(--body-color);    
 }
 
-.home__img{     
+.home__img{      
+    margin: auto;     
     box-shadow: 0px 18px 28px -24px var(--shadow-color);    
 }
 
@@ -1255,8 +1256,9 @@ iframe{
     .nav__logo{
         font-size: 1.5rem;
     }
-    .home__content{
-        margin: 0 4rem 2rem 0;
+    .home__container{
+        right: 5rem;
+        bottom: 3rem;
     }
     .portfolio__cards{
         grid-template-columns: repeat(2, 545px);
@@ -1276,8 +1278,11 @@ iframe{
         max-width: 1920px;
     }
     .nav{
-       margin: auto;
-    }         
+       margin: auto;             
+    }  
+    .home__img{
+        width: 100%;
+    }        
     .portfolio__cards{
         grid-template-columns: repeat(4, 460px);
     } 
@@ -1287,5 +1292,5 @@ iframe{
         max-width: 1540px;
         margin: auto;      
 }
-
+}
 
