@@ -860,6 +860,45 @@ iframe{
     background-color: var(--third-color);
 }
 
+/* GALLERY / PORTFOLIO */
+.gallery__button-container{
+    justify-content: center;
+    align-content: center;
+    column-gap: 1rem;
+    margin-top: 3rem;
+    margin-bottom: 5rem;    
+}
+.gallery__button-container > button:nth-child(2){
+    margin-left: 3rem;
+}
+.gallery__box{
+    grid-template-columns: repeat(3, 31.5%);   
+    margin-inline: 2rem;    
+}
+.column{
+    display: none;
+}
+.gallery__column:after{
+    content: "";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: row wrap;
+}
+/* Filtered elements */
+.show {
+    display: block;
+  }
+.filter-button{
+    transition: .3s all;
+}
+.filter-button:hover{
+    background-color: #86cf70;
+}
+.filter-button.active{
+    background-color: #0F4C75;
+}
+
 /* FOOTER */
 .footer{
     margin-top: 4rem;
