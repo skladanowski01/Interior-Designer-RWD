@@ -1178,7 +1178,7 @@ iframe{
 }
 
 /* 4medium dev */
-@media (min-width: 576px) and (max-width: 1150px) {
+@media (min-width: 576px) and (max-width: 1149px) {
     .home__img {  
         height: 75vh;      
         margin-bottom: .5rem;
@@ -1289,10 +1289,34 @@ iframe{
     }
     .portfolio__cards {
         grid-template-columns: repeat(2, 545px);
-    } 
-    .img__modal-container {
-        max-width: 1180px;
+    }                   
+}
+@media screen and (min-width: 1024px) {
+    .portfolio__modal{
+        height: auto;
     }
+    .img__modal-container{                 
+        width: 1000px;             
+    }
+    .modal__img{                               
+        max-width: 100%;             
+    } 
+    .modal__title{
+        font-size: 1rem;
+    }
+    .modal__description{
+        font-size: .8rem;
+    }
+    .item8, .item9{
+        padding: .2rem .3rem;
+        gap: 0;        
+    }
+    .modal__button-contact, 
+    .modal__button-gallery,
+    .button__portfolio-back{
+        font-size: .8rem;
+        padding: .2rem .5rem;
+    } 
 }
 
 /* 2K resolutions (2048x1152px & 2038x1536) */
