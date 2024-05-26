@@ -854,7 +854,7 @@ iframe{
     margin-bottom: 5rem;    
 }
 .gallery__button-container > button:nth-child(2){
-    margin-left: 3rem;
+    margin-left: 2rem;
 }
 .gallery__box{
     grid-template-columns: repeat(3, 31.5%);   
@@ -1174,7 +1174,13 @@ iframe{
     .contact__label {
         font-size: .58rem;
         left: .7rem;
-    }         
+    }  
+    .gallery__box{
+        grid-template-columns: 100%;              
+    } 
+    .filter-button{
+        font-size: .300rem;
+    }      
 }
 
 /* 4medium dev */
@@ -1245,7 +1251,7 @@ iframe{
     .img__modal-container {
         max-width: 700px;
         padding: 2rem;
-    }
+    }    
 }
 
 /* For Large Devices */
@@ -1322,7 +1328,8 @@ iframe{
 /* 2K resolutions (2048x1152px & 2038x1536) */
 @media screen and (min-width: 2048px) {
     .container {
-        max-width: 1920px;
+        max-width: 2000px;
+        margin-inline: auto;
     }
     .nav {
         margin: auto;             
