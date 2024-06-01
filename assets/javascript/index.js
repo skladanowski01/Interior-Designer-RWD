@@ -38,13 +38,17 @@ const swiperTestimonial = new Swiper('.testimonial__swiper', {
 /* swiper modal */
 const swiperModal = new Swiper('.img__modal-container', {
     loop: true,
-    spaceBetween: 12,
+    spaceBetween: 2,
     grabCursor: true,
   
     
     scrollbar: {
         el: '.swiper-scrollbar',
       }, 
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
   });
 
 
