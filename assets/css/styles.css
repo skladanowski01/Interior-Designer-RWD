@@ -869,7 +869,7 @@ iframe{
 .gallery__button-container > button:nth-child(2){
     margin-left: 2rem;
 }
-.gallery__box{
+.gallery__box{    
     grid-template-columns: repeat(3, 31.5%);   
     margin-inline: 2rem; 
     transition: all .4s;   
@@ -1070,7 +1070,7 @@ iframe{
 
 /* BREAKPOINTS oh__yeah, finally*/
 
-/* -- small devices -- */
+/* -- SMALL DEVICES -- */
 @media screen and (max-width: 576px) {
     .change-theme, .nav-toggle {
         font-size: 1.4rem;
@@ -1277,10 +1277,14 @@ iframe{
     } 
     .filter-button{
         font-size: .300rem;
-    }      
+    }  
+    .modal__gallery-content{
+        padding-top: 14rem;
+        width: 100vw;
+    }    
 }
 
-/* 4medium dev */
+/* MEDIUM DEVICES */
 @media (min-width: 576px) and (max-width: 1149px) {
     .home__img {  
         height: 75vh;      
@@ -1348,10 +1352,14 @@ iframe{
     .img__modal-container {
         max-width: 700px;
         padding: 2rem;
-    }    
+    } 
+    .modal__gallery-content{
+        padding-top: 14rem;
+        width: 100vw;
+    }   
 }
 
-/* For Large Devices */
+/* LARGE DEVICES */
 @media screen and (min-width: 1150px) {
     .container {
         margin-inline: auto;
@@ -1363,7 +1371,7 @@ iframe{
         margin-bottom: 3.5rem;
     }
     .nav {
-        height: calc(var(--header-height) + 2rem);
+        height: calc(var(--header-height) + 1rem);
         column-gap: 4rem;
         max-width: 2048px;
         margin: 0 2rem;        
@@ -1392,7 +1400,7 @@ iframe{
     }
     .portfolio__cards {
         grid-template-columns: repeat(2, 545px);
-    }                   
+    }                      
 }
 @media screen and (min-width: 1024px) {    
     .img__modal-container{                 
@@ -1417,9 +1425,13 @@ iframe{
         font-size: .8rem;
         padding: .2rem .5rem;
     } 
+    .modal__gallery-content{   
+        padding: 0;     
+        width: 66vw;
+    }    
 }
 
-/* 2K resolutions (2048x1152px & 2038x1536) */
+/* 2K+ BIG DEVICES (2048x1152px & 2038x1536) */
 @media screen and (min-width: 2048px) {
     .container {
         max-width: 1920px;
@@ -1439,9 +1451,12 @@ iframe{
     }
     .gallery__box{
         grid-template-columns: repeat(2, 800px);         
-        justify-content: center;
-                    
+        justify-content: center;                    
     } 
+    .modal__gallery-content{
+        padding-top: 0;
+        width: 64vw;
+    }
 }
 
 
