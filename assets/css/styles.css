@@ -568,12 +568,12 @@ body.dark-theme{
 .main__about-img{    
     max-width: 100%; 
     position: absolute;   
-    top: -3.5rem;          
+    top: -3.5rem;           
 }
 
 .main__about-information-content{
     border-top: 3px solid var(--main-color);   
-    padding-top: 4rem;      
+    padding-top: 2rem;      
     line-height: 2;  
     max-width: 75%;       
 }
@@ -1226,7 +1226,8 @@ iframe{
         font-size: .525rem;
     }   
     .main__title {
-        font-size: var(--h2-f-size);                
+        font-size: var(--h2-f-size); 
+        margin-bottom: 0;               
     }
     .main__about-box {
         display: flex;
@@ -1236,7 +1237,7 @@ iframe{
         width: 200px;
         height: 200px;
         position: relative;    
-        margin-bottom: 0;    
+        margin-bottom: 3rem;    
     } 
     .main__about-img {
         margin-top: 1.5rem;              
