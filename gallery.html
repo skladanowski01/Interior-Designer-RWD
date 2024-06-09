@@ -256,10 +256,16 @@
     </div>
 </section>
 
-<!-- Modal gallery images zoomable / CloseBTN -->
+<!-- Modal gallery images zoomable / CloseBTN / SwiperJS-->
 <div class="modal-gallery">
   <span class="close-modal">&times;</span>
-  <img class="modal__gallery-content">
+  <div class="swiper-container">
+      <div class="swiper-wrapper">
+          <!-- Dinamic slides -->
+      </div>      
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+  </div>
   <div class="caption"></div>
 </div>
 
@@ -319,8 +325,11 @@
     <!-- SCROLL UP -->    
     <a href="#" class="scrollup" id="scroll-up">
         <i class="ri-arrow-up-line"></i>
-    </a>    
+    </a>      
     <script src="./assets/javascript/scrollup.js"></script>
+    <!-- MODAL GALLERY WITH SWIPER JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./assets/javascript/gallerymodal.js"></script>
     <!-- SELECTION BTNs JS -->
     <script src="./assets/javascript/w3select-button.js"></script>
     <!-- MAIN JS -->

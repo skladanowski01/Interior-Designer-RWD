@@ -20,26 +20,6 @@ modalBack.forEach((modalBack) => {
             modalRemove.classList.remove('active-modal')
         })
     })
-})
-
-/* Gallery modal zoom in/out */
-document.addEventListener('DOMContentLoaded', () => {
-    const modalGallery = document.querySelector('.modal-gallery');
-    const modalImg = document.querySelector('.modal__gallery-content');
-    const captionText = document.querySelector('.caption');
-    const closeBtn = document.querySelector('.close-modal');
-
-    document.querySelectorAll('.zoomable').forEach(img => {
-        img.addEventListener('click', () => {
-            modalGallery.style.display = 'block';
-            modalImg.src = img.src;
-            captionText.innerHTML = img.alt;
-        });
-    });
-
-    closeBtn.addEventListener('click', () => {
-        modalGallery.style.display = 'none';
-    });
 });
 
 /* swiper testimonial */
@@ -70,7 +50,7 @@ const swiperModal = new Swiper('.img__modal-container', {
         prevEl: '.swiper-button-prev',
       },
   });
-  /* swiper for gallery */
+  
   
 
 

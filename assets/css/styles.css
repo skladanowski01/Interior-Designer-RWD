@@ -386,16 +386,19 @@ body.dark-theme{
 
 /* PORTFOLIO */
 .swiper-button-prev, .swiper-button-next{
-    color: #000000;             
-    opacity: .6; 
-    padding: 0 3.5rem;
+    color: wheat;  
+    background-color: #000;               
+    opacity: .6;     
     transition: opacity .4s, color .4s, background-color .4s;
 }
 .swiper-button-prev:hover, .swiper-button-next:hover{
     opacity: 1;
+    background-color: wheat;
+    color: #000;
 }
 .swiper-button-prev:active, .swiper-button-next:active{
-    color: #fff;    
+    color: #fff;   
+    background-color: sandybrown;
 }
 .portfolio{    
     background-color: var(--body-color);
@@ -888,8 +891,7 @@ iframe{
     transition: all .4s;
 }
 .content:hover{    
-    scale: 1.01;  
-    filter: drop-shadow(0 2px 4px var(--shadow-color));  
+    scale: 1.01;       
 }
 .zoomable {
     border-radius: 5px;
@@ -899,6 +901,11 @@ iframe{
 
 .zoomable:hover {
     opacity: 0.7;
+}
+.swiper-container{     
+    width: 100%;
+    height: 100%;
+    
 }
 
 /* The Modal (background) */
@@ -932,9 +939,11 @@ iframe{
     width: 80%;
     max-width: 700px;
     text-align: center;
-    color: #ccc;
-    padding: 10px 0;
-    height: 150px;
+    color: #ccc;    
+    height: auto;
+    position: relative;
+    top: -50px;
+    font-size: var(--h2-f-size);
 }
 
 /* Add Animation - Zoom in the Modal */
@@ -951,12 +960,13 @@ iframe{
 /* The Close Button */
 .close-modal {
     position: absolute;
-    top: 6.3rem;
+    top: 6.4rem;
     right: 2rem;
     color: #2383bb;
-    font-size: 40px;
+    font-size: 56px;
     font-weight: bold;
     transition: 0.3s;
+    z-index: 2;
 }
 
 .close-modal:hover,
@@ -1279,9 +1289,12 @@ iframe{
         font-size: .300rem;
     }  
     .modal__gallery-content{
-        padding-top: 14rem;
+        padding-top: 8rem;
         width: 100vw;
-    }    
+    }  
+    .caption{
+        top: -24rem;
+    }  
 }
 
 /* MEDIUM DEVICES */
