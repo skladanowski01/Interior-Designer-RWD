@@ -48,3 +48,46 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Funkcja dodająca klasę fade-in do wszystkich obrazków
+    function fadeInImages() {
+      const images = document.querySelectorAll('.gallery__box .content img');
+      images.forEach(img => {
+        img.classList.add('fade-in');
+      });
+    }
+
+    // Po załadowaniu strony
+    fadeInImages();
+
+    // Funkcja filtrowania obrazków
+    function filterSelection(category) {
+      const columns = document.querySelectorAll('.gallery__box .column');
+      columns.forEach(column => {
+        if (category === 'all' || column.classList.contains(category)) {
+          column.style.display = 'block';
+        } else {
+          column.style.display = 'none';
+        }
+      });
+      
+      // Dodanie animacji po filtrowaniu
+      fadeInImages();
+    }
+
+    // Dodanie nasłuchiwania na przyciski filtrowania
+    const filterButtons = document.querySelectorAll('.filter-button');
+    filterButtons.forEach(button => {
+      button.addEventListener('click', function () {
+        const category = this.getAttribute('onclick').match(/filterSelection\('(.+?)'\)/)[1];
+        filterSelection(category);
+        
+        // Usunięcie klasy aktywnej ze wszystkich przycisków
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        
+        // Dodanie klasy aktywnej do klikniętego przycisku
+        this.classList.add('active');
+      });
+    });
+  });

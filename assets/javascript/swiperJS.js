@@ -25,9 +25,9 @@ closeButtons.forEach((button, index) => {
 
 // Close modal when clicking outside
 window.addEventListener('click', (e) => {
-    modals.forEach((modal) => {
-        if (e.target === modal) {
-            modal.style.display = 'none';
+    modals.forEach((modals) => {
+        if (e.target === modals) {
+            modals.style.display = 'none';
         }
     });
 });
