@@ -948,7 +948,7 @@ iframe{
 }
 
 /* Caption of Modal Image */
-.caption {
+/* .caption {
     margin: auto;
     display: block;
     width: 80%;
@@ -960,10 +960,10 @@ iframe{
     top: -50px;
     font-size: var(--h2-f-size);
     z-index: 4;
-}
+} */
 
 /* Add Animation - Zoom in the Modal */
-.modal__gallery-content, .caption {  
+.modal__gallery-content {  
     animation-name: zoom;
     animation-duration: 0.6s;
 }
@@ -1300,11 +1300,7 @@ iframe{
     .modal__gallery-content{
         padding-top: 8rem;
         width: 100vw;
-    }  
-    .caption{
-        top: -24rem;
-        
-    }   
+    }        
     .portfolio__modal-content{
         width: 95vw;
     }  
