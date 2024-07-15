@@ -518,6 +518,7 @@ body.dark-theme{
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     z-index: var(--z-modal);   
@@ -556,9 +557,10 @@ body.dark-theme{
     font-size: var(--h2-f-size) !important;  
 }
 .modal__button-container{
+    margin-inline: auto;
     padding-top: 1rem;
     display: flex;
-    gap: .6rem;    
+    gap: .6rem;     
 } 
 .modal__button-container > :nth-child(3){
     margin-left: 2rem;
