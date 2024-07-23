@@ -1,6 +1,3 @@
-/* Google fonts */
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
-
 /* #### Variable CSS #### */
 /* ##################### */
 :root{
@@ -11,7 +8,7 @@
     --logotype-txt-color: #FEFBF6;
     --nav-menu-bg-color: #dbb26b;
     --nav-links-txt-color: #FEFBF6;
-    --head-txt-color: #9b7841;
+    --head-txt-color: #f1f1f1;
     
     --main-bg-color: #f7f0e7;
     --headers-txt-color: #291d10;
@@ -49,7 +46,7 @@
     --scrollup-color: #f7f0e7;
 
     /* TYPOGRAPHY && FONT */  
-    --head-font: 'Arial Black', sans-serif;  
+    /* --head-font: 'Arial Black', sans-serif;   */
     --body-font: 'Arial', sans-serif;
 
     --main-font: 2rem;
@@ -362,10 +359,9 @@ body.dark-theme{
     position: relative;
     background-color: var(--main-bg-color);        
 }
-
-.home__img{    
-    width: 100%;    
-    height: 90vh;
+.home__img{  
+    height: 95svh;  
+    width: 100%;     
     object-fit: cover;
     object-position: center;
     display: block;     
@@ -385,23 +381,23 @@ body.dark-theme{
     align-items: flex-end;                           
 }
 
-.home__title{
-    font-family: var(--head-font);
+.home__title{    
     font-size: var(--h1-f-size);
     padding-bottom: 2.5rem;  
     text-transform: uppercase;      
 }
-.home__title2{
-    font-family: var(--head-font);
+.home__title2{    
     font-size: 2.1rem;
     text-transform: uppercase;
 }
 .home__title,
 .home__title2{    
+    font-family: var(--main-font);
     font-weight: var(--font-weight-regular);
     text-align: end;
     padding-right: 2rem;
     color: var(--head-txt-color);
+    filter: drop-shadow(2px 3px 4px var(--shadows-color));
 }
 
 .home__social{
@@ -522,31 +518,33 @@ body.dark-theme{
     justify-content: center;
     align-items: center;
     z-index: var(--z-modal);   
-    overflow: auto;      
+    overflow: hidden; 
+    padding: 20px;     
 }
 .portfolio__modal-content {
-    width: 60vw;                          
+    width: 65vw;  
+    padding: 20px;   
+    margin-top: 1rem;                         
     overflow: hidden;
 }
 .swiper-container {
     width: 100%;
     height: 100%;
 }
-.modal__title{
-    text-transform: uppercase;
-    padding: .6rem 1.2rem;
-    background: var(--main-bg-color);
-    font-weight: var(--font-weight-bold);
-    font-size: var(--h2-f-size) !important;    
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.modal__description{
-    background: var(--main-bg-color);
-    padding: .6rem 1.2rem; 
-    font-size: var(--h2-f-size) !important;  
+.swiper-slide img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
 }
-.modal__button-container{
-    margin-inline: auto;
-    padding-top: 1rem;
+.modal__button-container{    
+    padding-top: 20px;
     display: flex;
     gap: .6rem;     
 } 
@@ -820,6 +818,8 @@ iframe{
     text-align: center;
     transition: background-color .4s;
     cursor: grab;
+    display: flex;
+    flex-direction: column;
 }
 .testimonial__border{
     width: 150px;
@@ -920,8 +920,9 @@ iframe{
 .modal-gallery {
     display: none;
     position: fixed;
-    z-index: 1;
-    padding-top: 100px;
+    margin-top: 1rem;
+    padding: 20px;    
+    z-index: 1;    
     left: 0;
     top: 0;
     width: 100%;
@@ -932,16 +933,14 @@ iframe{
 }
 
 /* Modal Content (image) */
-.modal__gallery-content {
-    margin: auto;
-    display: block;
-    width: 80vw;    
+.modal__gallery-content { 
+    width: 65vw !important;   
+    display: block; 
     object-fit: cover;
 }
-
-/* Caption of Modal Image */
-/* .caption {
-    margin: auto;
+.caption {
+    display: none;
+    /* margin: auto;
     display: block;
     width: 80%;
     max-width: 700px;
@@ -951,8 +950,8 @@ iframe{
     position: relative;
     top: -50px;
     font-size: var(--h2-f-size);
-    z-index: 4;
-} */
+    z-index: 4; */
+} 
 
 /* Add Animation - Zoom in the Modal */
 .modal__gallery-content {  
@@ -1289,9 +1288,8 @@ iframe{
     .gallery__box{
         grid-template-columns: 100%;              
     }      
-    .modal__gallery-content{
-        padding-top: 8rem;
-        width: 100vw;
+    .modal__gallery-content{        
+        width: 100vw !important;
     }        
     .portfolio__modal-content{
         width: 95vw;
